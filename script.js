@@ -39,3 +39,6 @@ alert( 0 || "" || 2 || undefined || true || falsе );
 //     num++;
 // } while (num < 55)
 
+function showFirstMessage(text) {
+    
+}
