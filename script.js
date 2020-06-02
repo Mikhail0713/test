@@ -1,116 +1,41 @@
-'use strict';
+let box = document.getElementById('box'),
+    btn = document.getElementsByTagName('button'),
+    circle = document.getElementsByClassName('circle'),
+    heart = document.querySelectorAll('.heart'),
+    oneHeart = document.querySelector('.heart'),
+    wrapper = document.querySelector('.wrapper');
 
-// let x = [ ] + 1 + 2; 
-// console.log(typeof(x));
+box.style.backgroundColor = 'blue';
+btn[1].style.borderRadius = '100%';
 
-// alert( 0 || "" || 2 || undefined || true || falsе );
+circle[0].style.backgroundColor = 'red';
+circle[1].style.backgroundColor = 'yellow';
+circle[2].style.backgroundColor = 'green';
 
-// let y = 1; 
-// let x = y = 2; 
-// alert(x);
-
-
-// // let num = 50;
-
-// switch (num) {
-//     case num < 49:
-//         console.log("Неверно!");
-//         break;
-//     case num > 100:
-//         console.log('Многовато будет!');
-//         break;
-//     case num > 80:
-//         console.log('Всё ещё многовато!');
-//         break;
-//     case 50:
-//         console.log('Верно!');
-//         break;
+// for (let i=0; i < heart.length; i++) {
+//     heart[i].style.backgroundColor = "blue";
 // }
 
-// let num = 50; 
-
-// // while (num < 55) {
-// //     console.log(num);
-// //     num++;
-// // }
-
-// do {
-//     console.log(num);
-//     num++;
-// } while (num < 55)
-// function learnJS (lang, callback) {
-//     console.log("Я учу " +lang);
-//     callback();
-// }
-
-// function done() {
-//     console.log("Я прошел третий урок!");
-// }
-
-// learnJS("JavaScript", done);
-
-let options = {
-    width: 1024,
-    height: 1024,
-    name: 'test'
-};
-
-console.log(options.name);
-
-options.bool = false;
-options.colors = {
-    border: 'black',
-    bg: 'red'
-};
-
-delete options.bool;
-
-console.log(options);
-
-for (let key in options) {
-    console.log("Свойство " + key + " имеет значение " + options[key]);
-}
-console.log(Object.keys(options).length);
-
-// let arr = ['first', 2, 3, 'four', 5];
-
-
-
-// // for(let i = 0; i < arr.length; i++) {
-// //     console.log(arr[i]);
-// // }
-
-// arr.forEach(function(item, i, mass) {
-//     console.log(i + ': ' + item + " (массив: " + mass + ")");
+// heart.forEach(function(item,i, hearts) {
+//     item.style.backgroundColor = 'blue';
 // });
 
-// let mass = [1, 3, 4, 6, 7];
+let div = document.createElement('div'),
+    text = document.createTextNode('Тут был я');
 
-// for (let key of mass) {
-//     console.log(key);
-// }
+div.classList.add('black');
 
-// console.log(arr);
+// wrapper.appendChild(div);
 
-// let ans = prompt('',''),
-//     arr = [];
+// div.innerHTML = '<h1>Hello World!</h1>';
+div.textContent = 'Hellow world!';
 
-// arr = ans.split(',');
-// console.log(arr);
-
-// let arr = ['asw','qqw','zzz','qwe'],
-//     i = arr.join(', ');
-
-// console.log(i);
-
-let arr = [1, 15, 4],
-    i = arr.sort(compareNum);
-
-function compareNum(a,b) {
-    return a-b;
-}
-
-console.log(i);
+document.body.insertBefore(div, circle[0]);
+document.body.removeChild(circle[1]);
+wrapper.removeChild(heart[1]);
+document.body.replaceChild(btn[1], circle[2]);
 
 
 
+
+console.log(div);
